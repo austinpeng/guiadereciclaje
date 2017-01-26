@@ -1,14 +1,14 @@
 //
-//  ReasonsViewController.swift
+//  PorqueController.swift
 //  La Guia De Estudias
 //
-//  Created by alden lamp on 1/24/17.
+//  Created by alden lamp on 1/25/17.
 //  Copyright © 2017 alden lamp. All rights reserved.
 //
 
 import UIKit
 
-class ReasonsViewController: UIViewController {
+class PorqueController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
