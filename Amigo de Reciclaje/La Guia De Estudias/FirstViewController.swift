@@ -8,69 +8,104 @@
 
 import UIKit
 import MapKit
+import SwiftyJSON
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UIViewController, MKMapViewDelegate {
+    
     
     @IBOutlet var map: MKMapView!
     
     @IBOutlet var containterView: UIView!
     
+    @IBOutlet var PlaceTitleLabel: UILabel!
+    @IBOutlet var placeDescriptionLabel: UILabel!
     
+    @IBOutlet var titleLabel: UILabel!
     
+    var name = [String]()
+    var descriptions = [String]()
+    var image = [UIImage]()
+    var fullNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let location = CLLocationCoordinate2D(latitude: 40.724706, longitude: -74.308496)
+        
+        containterView.isHidden = true
+        
+        titleLabel.sizeToFit()
+        titleLabel.adjustsFontSizeToFitWidth = true
+        PlaceTitleLabel.adjustsFontSizeToFitWidth = true
+        
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        let location = CLLocationCoordinate2D(latitude: 40.824706, longitude: -74.308496)
         let region = MKCoordinateRegionMake(location, span)
         
         map.setRegion(region, animated: true)
+        map.layer.cornerRadius = 16
+        getData()
+    }
+    
+    
+    
+    func getData(){
+        var placeName = [String]()
+        var lat = [Double]()
+        var long = [Double]()
+        var description = [String]()
+        var imageArr = [UIImage]()
+        var fullName = [String]()
         
-        var annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "RECYCLING Bin Here"
+        let path = Bundle.main.path(forResource: "info", ofType: "json")!
+        let data = NSData(contentsOfFile: path) as NSData!
+        let json = JSON(data: data as! Data, error : nil)
         
-        var annotation2 = CustomPointAnnotation()
-        annotation2.imageName = "recycle-can-hi.png"
-        annotation2.title = "TEST"
-        annotation2.coordinate = location
+        var it = json["places"].makeIterator()
+        while let stuff = it.next(){
+            placeName.append(stuff.0)
+            let miniJson = stuff.1
+            lat.append(miniJson["lat"].double!)
+            long.append(miniJson["long"].double!)
+            description.append(miniJson["description"].string!)
+            fullName.append(miniJson["name"].string!)
+            //let image1 = UIImage(named: miniJson["image"].string!)!
+            //image.append(image1)
+        }
         
+        self.image = imageArr
+        self.descriptions = description
+        self.name = placeName
+        self.fullNames = fullName
+        putAnnotations(name: placeName, lat: lat, long: long)
+    }
+    
+    func putAnnotations(name : [String], lat : [Double], long : [Double]){      //, images : [UIImage]){
         
-        map.addAnnotation(annotation2)
+        for i in 0...name.count-1{
+        
+            let location = CLLocationCoordinate2D(latitude: lat[i], longitude: long[i])
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = name[i]
+            map.addAnnotation(annotation)
+        }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        containterView.isHidden = false
+        var indexNum = name.index(of: view.annotation?.title! as! String!)!
+        PlaceTitleLabel.text = fullNames[indexNum]
+        placeDescriptionLabel.text = descriptions[indexNum]
+        
         
     }
     
-    class CustomPointAnnotation: MKPointAnnotation {
-        var imageName: String!
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
-    
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        if !(annotation is CustomPointAnnotation) {
-            return nil
-        }
-        
-        let reuseId = "test"
-        
-        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-        if anView == nil {
-            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            anView?.canShowCallout = true
-        }
-        else {
-            anView?.annotation = annotation
-        }
-        
-        //Set annotation-specific properties **AFTER**
-        //the view is dequeued or created...
-        
-        let cpa = annotation as! CustomPointAnnotation
-        anView?.image = UIImage(named:cpa.imageName)
-        
-        return anView
-    }
-    
     
 }
 

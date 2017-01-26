@@ -12,24 +12,20 @@ class PorqueController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(back(sender:)))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeDown)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func back(sender: UIBarButtonItem) {
+        // Perform your custom actions
+        // ...
+        // Go back to the previous ViewController
+        print("test")
+        self.tabBarController?.tabBar.isHidden = false
+        _ = navigationController?.popViewController(animated: true)
     }
-    */
+
 
 }

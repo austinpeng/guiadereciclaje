@@ -1,0 +1,52 @@
+{
+
+    "places":{
+        "Morris Plains Recycling Center" : {
+            "lat" : 40.847614,
+            "long" : -74.47431799999998,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "Morris Plains Recycling Center"
+        },
+  
+        "Parsippany Troy-Hills Twp" : {
+            "lat" : 40.87087320000001,
+            "long" : -74.42884909999998,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "Parsippany Troy-Hills Twp Recycling Center"
+        },
+  
+        "Clean Green Recycling" : {
+            "lat" : 40.796521,
+            "long" : -74.474835,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "Clean Green Electronic Recycling"
+        },
+  
+        "One World Recycling" : {
+            "lat" : 40.766847,
+            "long" : -74.227252,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "One World Recycling"
+        },
+  
+        "Greenstar Recycling" : {
+            "lat" : 40.897653,
+            "long" : -74.150576,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "Greenstar Recycling"
+        },
+        
+        "Millburn Public Works" : {
+            "lat" : 40.724706,
+            "long" : -74.309582,
+            "description" : "Una centro de reciclaje",
+            "image" : "asdkfjgasdfkljhgasdfkjhgasdfkjhgasdkjfhgasdfkjhgasdf",
+            "name" : "Millburn Public Works"
+        }
+    }
+}
