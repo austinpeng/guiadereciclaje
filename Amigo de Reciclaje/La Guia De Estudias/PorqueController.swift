@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  PorqueController.swift
 //  La Guia De Estudias
 //
-//  Created by alden lamp on 1/24/17.
+//  Created by alden lamp on 1/25/17.
 //  Copyright © 2017 alden lamp. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class PorqueController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,6 @@ class ViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         _ = navigationController?.popViewController(animated: true)
     }
-    
-    
+
+
 }
