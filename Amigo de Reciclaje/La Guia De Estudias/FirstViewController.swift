@@ -20,7 +20,6 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var PlaceTitleLabel: UILabel!
     @IBOutlet var placeDescriptionLabel: UILabel!
     
-    @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     
     var name = [String]()
@@ -36,8 +35,6 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
         titleLabel.sizeToFit()
         titleLabel.adjustsFontSizeToFitWidth = true
         PlaceTitleLabel.adjustsFontSizeToFitWidth = true
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 16
         
         
         let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
@@ -46,7 +43,6 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
         
         map.setRegion(region, animated: true)
         map.layer.cornerRadius = 16
-        
         getData()
     }
     
@@ -57,28 +53,23 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
         var lat = [Double]()
         var long = [Double]()
         var description = [String]()
-        var fullName = [String]()
         var imageArr = [UIImage]()
+        var fullName = [String]()
         
         let path = Bundle.main.path(forResource: "info", ofType: "json")!
         let data = NSData(contentsOfFile: path) as NSData!
         let json = JSON(data: data as! Data, error : nil)
         
-        
         var it = json["places"].makeIterator()
         while let stuff = it.next(){
-            
             placeName.append(stuff.0)
             let miniJson = stuff.1
             lat.append(miniJson["lat"].double!)
             long.append(miniJson["long"].double!)
             description.append(miniJson["description"].string!)
             fullName.append(miniJson["name"].string!)
-            
-            
-            let imageName = miniJson["image"].string!
-            let image1 = UIImage(named: "\(imageName)")
-            imageArr.append(image1!)
+            //let image1 = UIImage(named: miniJson["image"].string!)!
+            //image.append(image1)
         }
         
         self.image = imageArr
@@ -93,7 +84,7 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
         for i in 0...name.count-1{
         
             let location = CLLocationCoordinate2D(latitude: lat[i], longitude: long[i])
-            let annotation = MKPointAnnotation()
+            var annotation = MKPointAnnotation()
             annotation.coordinate = location
             annotation.title = name[i]
             map.addAnnotation(annotation)
@@ -104,10 +95,11 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         containterView.isHidden = false
-        var indexNum = name.index(of: view.annotation?.title! as String!)!
+        var indexNum = name.index(of: view.annotation?.title! as! String!)!
         PlaceTitleLabel.text = fullNames[indexNum]
         placeDescriptionLabel.text = descriptions[indexNum]
-        imageView.image = image[indexNum]
+        
+        
     }
     
     func delay(_ delay:Double, closure:@escaping ()->()) {

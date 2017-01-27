@@ -167,18 +167,9 @@ extension UILabel {
         }
         
         self.baselineAdjustment = .alignBaselines
-        let oC = self.center
+        let originalCenter = self.center
         self.sizeToFit()
-        //self.center = originalCenter
-        
-        switch UIDevice().modelName{
-            
-        case "1" : self.center = CGPoint(x: oC.x + 30, y: oC.y)
-        case "3" : self.center = CGPoint(x: oC.x - 28, y: oC.y)
-        default : self.center = oC
-            
-        }
-        
+        self.center = originalCenter
         self.layer.opacity = 0.0
         
         let allLetterPaths = getPathOfText(false)
