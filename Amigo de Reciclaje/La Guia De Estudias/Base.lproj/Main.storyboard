@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qlm-wl-IF7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DxC-SI-oDC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="DxC-SI-oDC">
                                         <rect key="frame" x="120" y="41" width="135" height="135"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="135" id="X1Y-Ka-2I5"/>
@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="PlaceTitleLabel" destination="Pen-pc-FQm" id="xg1-Av-WNl"/>
                         <outlet property="containterView" destination="Rkz-b4-60d" id="tBw-dd-ppT"/>
+                        <outlet property="imageView" destination="DxC-SI-oDC" id="Ghq-in-Y8J"/>
                         <outlet property="map" destination="ag8-2Z-Ixb" id="fzx-JV-dzI"/>
                         <outlet property="placeDescriptionLabel" destination="gfa-iM-DRK" id="B4V-Jc-zwg"/>
                         <outlet property="titleLabel" destination="Yg2-de-6Dl" id="Iax-Es-m3A"/>
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="-313"/>
+            <point key="canvasLocation" x="1680.8" y="-313.49325337331339"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -155,7 +156,8 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="duc-63-PcV">
                                 <rect key="frame" x="0.0" y="251" width="375" height="367"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="63" id="37k-7c-2Pf" customClass="TableViewCell" customModule="La_Guia_De_Estudias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="63"/>
@@ -164,13 +166,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="qiR-Uj-y1c">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stack_of_Paper-128" translatesAutoresizingMaskIntoConstraints="NO" id="qiR-Uj-y1c">
                                                     <rect key="frame" x="8" y="8" width="46" height="46.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="CdH-LJ-8LG"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked_2" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Lm-bIz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_sign" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Lm-bIz">
                                                     <rect key="frame" x="327" y="12" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="7jF-SF-hja"/>
@@ -196,6 +198,7 @@
                                                 <constraint firstItem="k9l-RS-as5" firstAttribute="top" secondItem="ueb-tM-Szg" secondAttribute="topMargin" constant="8" id="ecv-eU-o3e"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="iconImage" destination="qiR-Uj-y1c" id="l8S-jm-TDR"/>
                                             <outlet property="symbolImage" destination="9aE-Lm-bIz" id="LbT-fn-vdU"/>
@@ -252,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
+            <point key="canvasLocation" x="2562" y="359"/>
         </scene>
         <!--Porque Controller-->
         <scene sceneID="Q0B-bS-FFq">
@@ -278,23 +281,47 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TX-NS-eR0">
+                                <rect key="frame" x="16" y="240.5" width="343" height="219"/>
+                                <string key="text">Necesitamos proteger nuestro mundo. Hay muchas efectos negativos de nuestro impacto en el mundo. Los emisiones de la tecnología tiene un efecto directo en el cambio climático. Cuando nosotros reciclamos, reducimos la basura y los efectos negativos. </string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Por qué es importante a reciclar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-kp-ZN1">
+                                <rect key="frame" x="16" y="120" width="343" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Lsl-Kk-hAt" firstAttribute="leading" secondItem="Mao-Bl-h1A" secondAttribute="leadingMargin" constant="10" id="9Qh-Z4-oFV"/>
+                            <constraint firstItem="8TX-NS-eR0" firstAttribute="top" secondItem="rTm-kp-ZN1" secondAttribute="bottom" constant="90" id="BzR-Fs-tnd"/>
+                            <constraint firstItem="8TX-NS-eR0" firstAttribute="trailing" secondItem="Mao-Bl-h1A" secondAttribute="trailingMargin" id="DCJ-xO-0FZ"/>
                             <constraint firstItem="b3d-6q-vpM" firstAttribute="width" secondItem="Mao-Bl-h1A" secondAttribute="width" id="EiI-Ca-4f4"/>
+                            <constraint firstItem="8TX-NS-eR0" firstAttribute="leading" secondItem="Mao-Bl-h1A" secondAttribute="leadingMargin" id="PKQ-mJ-cSi"/>
+                            <constraint firstItem="rTm-kp-ZN1" firstAttribute="leading" secondItem="Mao-Bl-h1A" secondAttribute="leadingMargin" id="cQq-Zy-fOe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lsl-Kk-hAt" secondAttribute="trailing" constant="10" id="d3T-ej-Fea"/>
+                            <constraint firstItem="rTm-kp-ZN1" firstAttribute="top" secondItem="Lsl-Kk-hAt" secondAttribute="bottom" constant="40" id="fbE-LH-Nau"/>
                             <constraint firstItem="b3d-6q-vpM" firstAttribute="centerX" secondItem="Mao-Bl-h1A" secondAttribute="centerX" id="kD1-Oo-GdU"/>
                             <constraint firstItem="Lsl-Kk-hAt" firstAttribute="top" secondItem="LrE-5j-CSj" secondAttribute="bottom" constant="10" id="mPD-jC-uU9"/>
                             <constraint firstItem="b3d-6q-vpM" firstAttribute="centerY" secondItem="Mao-Bl-h1A" secondAttribute="centerY" id="q0p-I5-4fk"/>
                             <constraint firstItem="b3d-6q-vpM" firstAttribute="height" secondItem="Mao-Bl-h1A" secondAttribute="height" id="qRX-MC-Oqe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rTm-kp-ZN1" secondAttribute="trailing" id="wxB-Am-fFc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3qc-dO-h42"/>
+                    <connections>
+                        <outlet property="porqueLabel" destination="rTm-kp-ZN1" id="aOI-hI-Bjo"/>
+                        <outlet property="reasoning" destination="8TX-NS-eR0" id="UYr-me-9Ng"/>
+                        <outlet property="titleLabel" destination="Lsl-Kk-hAt" id="h4O-eE-ePo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XE0-31-5yE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="0.0"/>
+            <point key="canvasLocation" x="3484" y="-0.44977511244377816"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MDa-QA-KfN">
@@ -308,9 +335,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-6i-0qD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cosa de Reciclar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ae-sY-YsO">
                                 <rect key="frame" x="26" y="28" width="323" height="50"/>
                                 <constraints>
@@ -320,7 +344,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-cA-Lyj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-cA-Lyj">
                                 <rect key="frame" x="82" y="105" width="211" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zKg-cA-Lyj" secondAttribute="height" multiplier="1:1" id="NFN-Ke-qUa"/>
@@ -335,6 +359,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-6i-0qD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -354,10 +381,87 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5zK-qe-VGA"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="CB6-6i-0qD" id="mzv-eQ-KlJ"/>
+                        <outlet property="descriptionLabel" destination="a2d-Jz-RSm" id="Ug3-D6-7BF"/>
+                        <outlet property="imageView" destination="zKg-cA-Lyj" id="HxU-7O-ORY"/>
+                        <outlet property="titleLabel" destination="9ae-sY-YsO" id="F4O-g5-dfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3LT-Pi-jfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546.4000000000001" y="657.12143928035982"/>
+            <point key="canvasLocation" x="3484" y="725"/>
+        </scene>
+        <!--Start Page Controller-->
+        <scene sceneID="ZKe-NI-fSK">
+            <objects>
+                <viewController id="lyf-Fh-SPZ" customClass="StartPageController" customModule="La_Guia_De_Estudias" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eH6-Mb-ACE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hmv-yh-a4a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ion-Ea-fVy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="a8Y-Li-tzR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Amigo-De-Reciclaje" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-ZF-6Lj">
+                                <rect key="frame" x="22" y="104" width="331" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zjA-ZF-6Lj" secondAttribute="height" multiplier="331:137" id="7SJ-E2-6vc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPB-nt-yGt">
+                                <rect key="frame" x="22" y="262" width="331" height="205"/>
+                                <string key="text">Soy Amigo de Reciclaje.
+Enseño a tú a reciclar. Mi sistema único puede ayudarle a la gente como preservar el medio ambiente.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fny-UV-5K8">
+                                <rect key="frame" x="84" y="517" width="206" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="Gai-k2-5Mv"/>
+                                    <constraint firstAttribute="height" constant="60" id="bPl-MG-XUd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
+                                <state key="normal" title="Empezar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="push" id="YZD-m2-SAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fny-UV-5K8" firstAttribute="centerX" secondItem="ion-Ea-fVy" secondAttribute="centerX" id="1hq-Pr-LIr"/>
+                            <constraint firstItem="a8Y-Li-tzR" firstAttribute="leading" secondItem="ion-Ea-fVy" secondAttribute="leading" id="54m-di-zE2"/>
+                            <constraint firstItem="fny-UV-5K8" firstAttribute="top" secondItem="pPB-nt-yGt" secondAttribute="bottom" constant="50" id="FYr-t8-74Z"/>
+                            <constraint firstItem="a8Y-Li-tzR" firstAttribute="top" secondItem="ion-Ea-fVy" secondAttribute="top" id="PYA-id-w6H"/>
+                            <constraint firstItem="pPB-nt-yGt" firstAttribute="leading" secondItem="ion-Ea-fVy" secondAttribute="leadingMargin" constant="6" id="RGR-jZ-bLH"/>
+                            <constraint firstItem="zjA-ZF-6Lj" firstAttribute="centerX" secondItem="ion-Ea-fVy" secondAttribute="centerX" id="ZWc-wx-fpp"/>
+                            <constraint firstAttribute="trailing" secondItem="a8Y-Li-tzR" secondAttribute="trailing" id="bcm-Je-S3g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zjA-ZF-6Lj" secondAttribute="trailing" constant="6" id="ds7-zV-xDS"/>
+                            <constraint firstItem="Hmv-yh-a4a" firstAttribute="top" secondItem="a8Y-Li-tzR" secondAttribute="bottom" id="e6Z-7R-FIt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pPB-nt-yGt" secondAttribute="trailing" constant="6" id="h2e-Tg-vrt"/>
+                            <constraint firstItem="zjA-ZF-6Lj" firstAttribute="leading" secondItem="ion-Ea-fVy" secondAttribute="leadingMargin" constant="6" id="knY-GG-qmk"/>
+                            <constraint firstItem="zjA-ZF-6Lj" firstAttribute="top" secondItem="eH6-Mb-ACE" secondAttribute="bottom" constant="40" id="y1f-vO-oBA"/>
+                            <constraint firstItem="pPB-nt-yGt" firstAttribute="top" secondItem="zjA-ZF-6Lj" secondAttribute="bottom" constant="21" id="yvL-aV-hzq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPE-Kh-Ysj"/>
+                    <connections>
+                        <outlet property="desLabel" destination="pPB-nt-yGt" id="pCx-jH-FHn"/>
+                        <outlet property="startButton" destination="fny-UV-5K8" id="gRd-T4-asy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ac-tb-6vU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88.799999999999997" y="-230.73463268365819"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -377,7 +481,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="938.39999999999998" y="-0.44977511244377816"/>
         </scene>
         <!--Información-->
         <scene sceneID="A9R-rk-rve">
@@ -396,13 +500,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUJ-Nb-ELZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pUl-ge-ssF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qlm-wl-IF7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJY-gq-QVH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lyf-Fh-SPZ" kind="relationship" relationship="rootViewController" id="rOH-TX-2UV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqL-7d-s8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1028" y="-230.73463268365819"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Amigo-De-Reciclaje" width="508" height="213"/>
+        <image name="Stack_of_Paper-128" width="128" height="128"/>
         <image name="blueGradient" width="375" height="667"/>
-        <image name="checked_2" width="96" height="96"/>
         <image name="cup" width="256" height="256"/>
+        <image name="delete_sign" width="96" height="96"/>
+        <image name="image3" width="780" height="780"/>
         <image name="info" width="30" height="30"/>
         <image name="map_marker_filled" width="30" height="30"/>
     </resources>

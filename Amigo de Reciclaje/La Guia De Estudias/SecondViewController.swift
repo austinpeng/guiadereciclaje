@@ -7,6 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+
+var currentItem = String()
+var currentImage = UIImage()
+var currentdescription = String()
+
+
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,6 +25,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var subTitleLabel: UILabel!
+    
+    
+    var items = [String]()
+    var works = [Bool]()
+    var images = [UIImage]()
+    var descriptions = [String]()
     
     
     override func viewDidLoad() {
@@ -33,8 +47,27 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.tabBarController?.tabBar.isHidden = false
         
+        
+        getData()
     }
     
+    
+    func getData(){
+        let path = Bundle.main.path(forResource: "info", ofType: "json")!
+        let data = NSData(contentsOfFile: path) as NSData!
+        let json = JSON(data: data as! Data, error : nil)
+        
+        
+        var it = json["recycling items"].makeIterator()
+        
+        while let miniJson = it.next(){
+            items.append(miniJson.0)
+            works.append((miniJson.1["recycle"].bool)!)
+            images.append(UIImage(named: miniJson.1["image"].string!)!)
+            descriptions.append(miniJson.1["description"].string!)
+        }
+        
+    }
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,29 +75,29 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
-    /*
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        tableView.headerView(forSection: 0)?.backgroundView?.backgroundColor = UIColor.clear
-        tableView.headerView(forSection: section)?.textLabel?.textColor = UIColor.white
-        
-        return "This is a test"
-    }
-    */
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.titleLabel.text = "taza rojo"
+        
+        cell.titleLabel.text = items[indexPath.row]
+        cell.titleLabel.adjustsFontSizeToFitWidth = true
+        cell.iconImage.image = images[indexPath.row]
+        cell.symbolImage.image = UIImage(named: works[indexPath.row] ? "checkmark" : "delete_sign")
+        
         cell.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView?.backgroundColor = UIColor.clear
         return cell
     }
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "seg", sender: nil)
-        //self.navigationController?.pushViewController(SecondViewController(), animated: true)
         
+        currentItem = items[indexPath .row]
+        currentImage = images[indexPath.row]
+        currentdescription = descriptions[indexPath.row]
+        performSegue(withIdentifier: "seg", sender: nil)
         
     }
     
