@@ -60,7 +60,7 @@ header .block .logo {
   margin-bottom: 70px;
 }
 header .block h2 {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   color: #fff;
 }
 header .block p {
@@ -73,10 +73,10 @@ header .block .download-btn a {
   margin-right: 10px;
 }
 #service {
-  padding: 80px 0 100px;
+  padding: 80px 0 70px;
 }
 #service .title {
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 #service .title h2 {
   margin-top: 0;
@@ -103,27 +103,69 @@ header .block .download-btn a {
   padding-top: 90px;
 }
 #showcase .block img {
-  margin-bottom: -228px;
+  margin-bottom: -150px;
 }
-#feature {
-  padding: 325px 0 105px 0;
+#pasado {
+  padding: 200px 0 30px 0;
 }
-#feature .title {
-  margin-bottom: 60px;
+#pasado .title {
+  margin-bottom: 50px;
 }
-#feature .block .media {
+#pasado .block .media {
   margin-bottom: 33px;
 }
-#feature .block .media:last-child {
+#pasado .block .media:last-child {
   margin-bottom: 0;
 }
-#feature .block .media h4 {
+#pasado .block .media h4 {
   color: #1b1b1b;
 }
-#feature .block .media p {
+#pasado .block .media p {
   color: #999999;
 }
-#feature .block .media > .pull-left {
+#pasado .block .media > .pull-left {
+  padding-right: 20px;
+}
+#presente {
+  padding: 0px 0 30px 0;
+}
+#presente .title {
+  margin-bottom: 50px;
+}
+#presente .block .media {
+  margin-bottom: 33px;
+}
+#presente .block .media:last-child {
+  margin-bottom: 0;
+}
+#presente .block .media h4 {
+  color: #1b1b1b;
+}
+#presente .block .media p {
+  color: #999999;
+}
+#presente .block .media > .pull-left {
+  padding-right: 20px;
+}
+#futuro {
+  padding: 0px 0 70px 0;
+}
+#futuro .title {
+  margin-bottom: 50px;
+}
+#futuro .block .media {
+  margin-bottom: 33px;
+}
+#futuro .block .media:last-child {
+  margin-bottom: 0;
+}
+#futuro .block .media h4 {
+  color: #1b1b1b;
+}
+#futuro .block .media p {
+  color: #999999;
+}
+#futuro .block .media > .pull-left {
   padding-right: 20px;
 }
 #testimonial {
@@ -148,7 +190,7 @@ header .block .download-btn a {
   font-size: 12px;
 }
 #team {
-  padding: 80px 0 90px 0;
+  padding: 40px 0 90px 0;
 }
 #team .title {
   margin-bottom: 50px;
