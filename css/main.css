@@ -230,7 +230,7 @@ header .block .download-btn a {
   color: #707b82;
 }
 footer {
-  padding: 60px 0;
+  padding: 15px 0;
   background: #fafafa;
   border-top: 1px solid #d7d7d7;
 }
@@ -253,7 +253,7 @@ footer .social-link ul li {
   display: inline-block;
 }
 footer .social-link ul li a {
-  color: #cccccc;
+  color: #989898;
   font-size: 25px;
   padding: 0 5px;
   display: inline-block;
