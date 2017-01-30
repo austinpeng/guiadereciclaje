@@ -1,0 +1,126 @@
+{
+
+    "places":{
+        "Morris Plains Recycling Center" : {
+            "lat" : 40.847614,
+            "long" : -74.47431799999998,
+            "description" : "271 Tabor Rd, Morris Plains, NJ 07950",
+            "image" : "image1",
+            "name" : "Morris Plains Recycling Center"
+        },
+  
+        "Parsippany Troy-Hills Twp" : {
+            "lat" : 40.87087320000001,
+            "long" : -74.42884909999998,
+            "description" : "1 Pump House Rd, Parsippany, NJ 07051",
+            "image" : "image2",
+            "name" : "Parsippany Troy-Hills Twp Recycling Center"
+        },
+  
+        "Clean Green Recycling" : {
+            "lat" : 40.796521,
+            "long" : -74.474835,
+            "description" : "139 Morris St, Morristown, NJ 07960",
+            "image" : "image3",
+            "name" : "Clean Green Electronic Recycling"
+        },
+  
+        "One World Recycling" : {
+            "lat" : 40.766847,
+            "long" : -74.227252,
+            "description" : "126 Hickory St, City of Orange, NJ 07050e",
+            "image" : "image4",
+            "name" : "One World Recycling"
+        },
+  
+        "Greenstar Recycling" : {
+            "lat" : 40.897653,
+            "long" : -74.150576,
+            "description" : "79 Florida Ave, Paterson, NJ 07503",
+            "image" : "image5",
+            "name" : "Greenstar Recycling"
+        },
+        
+        "Millburn Public Works" : {
+            "lat" : 40.724706,
+            "long" : -74.309582,
+            "description" : "345 Essex St, Millburn, NJ 07041",
+            "image" : "image6" ,
+            "name" : "Millburn Public Works"
+        }
+    },
+    
+    "recycling items" : {
+        
+        "Papel" : {
+            "english" : "Paper",
+            "recycle" : true,
+            "description" : "Este cosa es Reciclable",
+            "image" : "papel"
+        },
+        
+        "Cartón" : {
+            "english" : "Cardboard",
+            "recycle" : true,
+            "description" : "Este cosa es Reciclable",
+            "image" : "cardboard"
+        },
+        
+        "Vidrio" : {
+            "english" : "Glass",
+            "recycle" : true,
+            "description" : "Este cosa es Reciclable",
+            "image" : "glass"
+        },
+        
+        "Aluminio" : {
+            "english" : "Aluminum",
+            "recycle" : true,
+            "description" : "Este cosa es Reciclable",
+            "image" : "aluminum"
+        },
+        
+        "Alimentos/Comidas" : {
+            "english" : "Food",
+            "recycle" : false,
+            "description" : "Pon los alimentos en la basura porque no son reciclable",
+            "image" : "food"
+        },
+        
+        "Tapas" : {
+            "english" : "Bottle Caps",
+            "recycle" : false,
+            "description" : "Pon las tapas en la basura porque no son reciclable",
+            "image" : "cap"
+        },
+        
+        "Tela" : {
+            "english" : "Cloth",
+            "recycle" : false,
+            "description" : "Pon las telas en la basura porque no son reciclable",
+            "image" : "cloth"
+        },
+        
+        "Pañuelo de Papel" : {
+            "english" : "tissues",
+            "recycle" : false,
+            "description" : "Pon los pañuelos de papel en la basura porque no son reciclable",
+            "image" : "tissues"
+        },
+        
+        "Latas de pintura" : {
+            "english" : "paint cans",
+            "recycle" : false,
+            "description" : "Pon las latas de pintura en la basura porque no son reciclable",
+            "image" : "can"
+        },
+        
+        "Taza Roja" : {
+            "english" : "Red Cup",
+            "recycle" : false,
+            "description" : "Las tazas rojas usan una otro tipo de plastico que no es reciclable",
+            "image" : "cup"
+        }
+        
+    }
+}
