@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF24107D1E31262B003D3CD7"
-               BuildableName = "La Guia De Estudias.app"
+               BuildableName = "Amigo de Reciclaje.app"
                BlueprintName = "La Guia De Estudias"
                ReferencedContainer = "container:La Guia De Estudias.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF24107D1E31262B003D3CD7"
-            BuildableName = "La Guia De Estudias.app"
+            BuildableName = "Amigo de Reciclaje.app"
             BlueprintName = "La Guia De Estudias"
             ReferencedContainer = "container:La Guia De Estudias.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF24107D1E31262B003D3CD7"
-            BuildableName = "La Guia De Estudias.app"
+            BuildableName = "Amigo de Reciclaje.app"
             BlueprintName = "La Guia De Estudias"
             ReferencedContainer = "container:La Guia De Estudias.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF24107D1E31262B003D3CD7"
-            BuildableName = "La Guia De Estudias.app"
+            BuildableName = "Amigo de Reciclaje.app"
             BlueprintName = "La Guia De Estudias"
             ReferencedContainer = "container:La Guia De Estudias.xcodeproj">
          </BuildableReference>

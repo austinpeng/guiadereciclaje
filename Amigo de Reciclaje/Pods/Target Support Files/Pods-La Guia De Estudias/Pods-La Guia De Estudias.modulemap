@@ -1,6 +1,0 @@
-framework module Pods_La_Guia_De_Estudias {
-  umbrella header "Pods-La Guia De Estudias-umbrella.h"
-
-  export *
-  module * { export * }
-}
